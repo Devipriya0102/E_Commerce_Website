@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - E-Commerce</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('static/images/cart-background.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        main {
+            max-width: 800px;
+            margin: 50px auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            border-bottom: 1px solid #ccc;
+        }
+        .total {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: right;
+            margin-top: 20px;
+        }
+        .checkout-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+        .checkout-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Your Shopping Cart</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="cart.html">Cart</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Items in Your Cart</h2>
+        <div id="cart-list"></div>
+        <div class="total" id="total">Total: $0.00</div>
+        <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+    </main>
+    <footer>
+        <p>&copy; 2024 Shoppy</p>
+    </footer>
+    <script src="static/js/script.js"></script>
+</body>
+</html>
